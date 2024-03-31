@@ -1,0 +1,23 @@
+{{>layouts/header}}
+<table class="table">
+    <a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a><!--범위 지정이 안돼있어 article.id로 사용-->
+    <a href="/articles/{{article.id}}/delete" class="btn btn-danger">Delete</a>
+    <a href="/articles">Go to Article List</a>
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#article}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    {{/article}}
+    </tbody>
+</table>
+{{>layouts/footer}}
